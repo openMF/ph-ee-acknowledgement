@@ -2,9 +2,9 @@ camel:
   server-port: 5000
   springboot:
     main-run-controller: true
-#  dataformat:
-#    json-jackson:
-#      auto-discover-object-mapper: true
+  dataformat:
+    json-jackson:
+      auto-discover-object-mapper: true
 
 
 zeebe:
@@ -27,3 +27,7 @@ hostconfig:
   host: 127.0.0.1
   protocol: http
   port: 9191
+
+messagegateway:
+  fineract-platform-tenantid: deafult
+  fineract-tenant-app-key: 123456543234abdkdkdkd
