@@ -1,0 +1,44 @@
+camel:
+  server-port: 5000
+  springboot:
+    main-run-controller: true
+  dataformat:
+    json-jackson:
+      auto-discover-object-mapper: true
+
+
+zeebe:
+  client:
+    max-execution-threads: 100
+    number-of-workers: 5
+    evenly-allocated-max-jobs: "#{${zeebe.client.max-execution-threads} / ${zeebe.client.number-of-workers}}"
+    ttl: 30000
+  broker:
+    contactpoint: "localhost:26500"
+
+#provider:
+#  telerivet:
+#    enabled: true
+#    id: 3
+#  rapidpro:
+#    enabled: false
+
+hostconfig:
+  host: 127.0.0.1
+  protocol: http
+  port: 9191
+
+fineractconfig:
+  tenantid: "Fineract-Platform-TenantId"
+  tenantidvalue : "default"
+  tenantappkey: "Fineract-Tenant-App-Key"
+  tenantappvalue: "123456543234abdkdkdkd"
+
+messagegatewayconfig:
+  host: 127.0.0.1
+  protocol: http
+  port: 9191
+
+config:
+  yes: YES
+  no: NO
